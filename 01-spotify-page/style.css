@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -34,8 +35,10 @@ header div {
 .menu li{
     margin-left: 25px;
     font-size: 18px;
+}
 
-
+.menu li:hover {
+    color: #1ed760;
 }
 
 .section-premium {
@@ -79,6 +82,11 @@ header div {
     border: 2px solid black;
     font-size: 15px;
 }
+
+#btn-comece-agora:hover {
+    padding: 20px 40px;
+}
+
 
 #btn-ver-planos {
     background-color: rgb(29, 117, 222);
@@ -154,6 +162,10 @@ header div {
 
 .section-plan {
     display: flex;
+    height: 800px;
+    max-width: 900px;
+    margin: auto;
+    padding-bottom: 100px;
 }
 
 .plan-style {
@@ -165,8 +177,98 @@ header div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 500px;
+    height: 800px;
     max-width: 180px;
     font-size: 15px;
+}
+
+.free-month {
+    background-color: rgb(13, 114, 234);
+    color: white;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.single-payment {
+    background-color: white;
+    color: rgb(13, 114, 234);
+    border-radius: 5px;
+    border: 1px solid rgb(13, 114, 234);
+    padding: 7px;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.price {
+    text-align: left;
+}
+
+.plan-style hr {
+    width: 100%;
+    margin: 10px 0;
 
 }
+
+.plan-style ol {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    list-style-type:disc;
+    grid-row:auto;
+    padding-top: 20px;
+}
+
+.btn-comece-agora {
+    background-color: black;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    border: 2px solid black;
+    font-size: 15px;
+}
+
+.termo, .termo a {
+    color: rgb(83, 83, 83);
+
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 70px 10%;
+}
+
+footer div ul {
+    color: #fff;
+    list-style-type: none;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer li:nth-child(1) {
+    padding-bottom: 20px;
+    color: #919496;
+}
+
+footer li {
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+footer img {
+    width: 150px;
+}
+
+footer i {
+    color: white; 
+    font-size: 24px;
+    padding: 0 10px;
+
+}
+
