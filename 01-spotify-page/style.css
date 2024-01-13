@@ -88,3 +88,13 @@ header div {
     border-radius: 50px;
     font-size: 15px;
 }
+
+.section-servico {
+    width: 60%;
+}
+
+.section-servico h2 {
+    padding: 70px 0;
+    font-size: 40px;
+
+}
