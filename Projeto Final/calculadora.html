@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Financeira</title>
+</head>
+<body>
+    <h1>Calculadora Financeira</h1>
+    <form>
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" name="valor" required><br><br>
+        <label for="juros">Juros (%):</label>
+        <input type="number" id="juros" name="juros" required><br><br>
+        <label for="periodo">Período (meses):</label>
+        <input type="number" id="periodo" name="periodo" required><br><br>
+        <input type="button" value="Calcular" onclick="calcular()">
+    </form>
+    <h1>Taxa Equivalente</h1>
+    <h2>Título Original</h2>
+    <form>
+        <div>
+            <label for="CDI">CDI:</label>
+            <input type="juros" id="CDI" name="CDI" required><br><br>
+            <label for="periodo">Período em meses:</label>
+            <input type="number" id="periodo" name="periodo" required><br><br>
+        </div>
+
+        <div>
+            <label for="PRÉ">PRÉ:</label>
+            <input type="juros" id="PRÉ" name="PRÉ" required><br><br>
+            <label for="periodo">Período em meses:</label>
+            <input type="number" id="periodo" name="periodo" required><br><br>
+        </div>
+        <div>
+            <label for="IPCA+">IPCA+:</label>
+            <input type="juros" id="IPCA+" name="IPCA+" required><br><br>
+            <label for="periodo">Período em meses:</label>
+            <input type="number" id="periodo" name="periodo" required><br><br>
+        </div>
+        <div>
+            <label for="CDI+">CDI+:</label>
+            <input type="juros" id="IPCA+" name="CDI+" required><br><br>
+            <label for="periodo">Período em meses:</label>
+            <input type="number" id="periodo" name="periodo" required><br><br>
+        </div>
+
+        <input type="button" value="Calcular" onclick="calcular()">
+    </form>
+    <br>
+    <p id="resultado"></p>
+    <script>
+        function calcular() {
+            var valor = document.getElementById("valor").value;
+            var juros = document.getElementById("juros").value;
+            var periodo = document.getElementById("periodo").value;
+            var juros_mensal = juros / 100 / 12;
+            var pagamento_mensal = (valor * juros_mensal) / (1 - Math.pow(1 + juros_mensal, -periodo));
+            var total_pago = pagamento_mensal * periodo;
+            document.getElementById("resultado").innerHTML = "Pagamento mensal: <strong>R$ " + pagamento_mensal.toFixed(2) + "</strong><br>Total pago: <strong>R$ " + total_pago.toFixed(2) + "</strong>";
+        }
+    </script>
+</body>
+</html>

@@ -30,19 +30,54 @@ const school = {
 
   const position =(obj,index) => Object.values(obj)[index];
 
+  // QUESTÃO 02
+
+  const getNumberOfStudents = (obj) => {
+
+    let NumbersPerson = 0;
+
+  for (index = 0; index > obj.lessons.length; index += 1) {
+    NumbersPerson += obj.lessons[index].students;
+
+  }
+
+  return NumbersPerson;
+
+  }
+
+  // QUESTÃO 03
+
+  const verificationKeys = (obj, keys) => {
+ 
+    for (index = 0; index < obj.lessons.length; index += 1) {
+      if (obj.lessons[index] === undefined)  {
+        return false;
+      } 
+    }
+      return true;
+  };
+
+  // QUESTÃO 04
+  const alternTurn = (obj, course, Newturn) => {
+
+    let turn = 'Noite';
+ 
+    for (index = 0; index < obj.lessons.length; index += 1) {
+      if (obj.lessons[index].shift === school.lessons[0].shift)  {
+        return turn = Newturn;
+      } 
+    }
+    return alternTurn
+  };
+
+
+
+  
   console.log(position(school,0));
 
-  const getNumberOfStudents = (school) => {
+  console.log(getNumberOfStudents(school));
 
-    const NumbersPerson = 0
+  console.log(verificationKeys(school, 'Nada'));
 
-  for (index = 0; index > school.lessons.length; index =+ 1) {
-    NumbersPerson = school.lessons[index].students;
-
-    return NumbersPerson;
-
-  };
-
-  };
-
-  console.log(NumbersPerson(school));
+  console.log(alternTurn(school, 'Python', 'Noite'));
+  

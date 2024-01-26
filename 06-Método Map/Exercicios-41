@@ -1,0 +1,15 @@
+// Temperaturas em graus Celsius
+const temperaturesCelsius = [23, 10, 32, 21, 47];
+//let Fahrenheit = ((temperaturesCelsius[0] * 9/5) + 32);
+const convertToFahrenheit = () => {
+    let temperatureFahrenheit = temperaturesCelsius.map((temp) => {
+        return (temp * 9/5) + 32;
+    });
+    return temperatureFahrenheit;
+   
+};
+
+console.log(convertToFahrenheit(temperaturesCelsius));
+
+
+
