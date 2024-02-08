@@ -1,0 +1,50 @@
+body {
+    background-color: gray;
+    margin: 50px;
+    height: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu {
+display: flex;
+justify-content: space-evenly;
+}
+
+#Dog {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+#Cat {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+#Surprise {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.Random-Pet {
+    display: flex;
+    margin: 10px;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    border: 50px;
+    box-shadow: 3px 3px 12px #333;
+
+}
+
